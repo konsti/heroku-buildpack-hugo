@@ -3,6 +3,5 @@
 cat << EOF
 ---
 default_process_types:
-  web: "cd public && python -m SimpleHTTPServer \$PORT"
-  web: "hugo server --baseURL=\$BASE_URL --port=\$PORT --appendPort=false --disableLiveReload=true"
+  web: "./hugo server --baseURL=\$BASE_URL --bind=0.0.0.0 --port=\$PORT --appendPort=false --disableLiveReload=true"
 EOF
